@@ -7,3 +7,10 @@ semitec-103at-log.tsv: semitec-103at.tsv
 
 s103at.x: semitec-103at-log.tsv
 	python mks103attable.py $< > $@
+
+semitec-103at.png: semitec-103at-log.tsv semitec-103at.plt
+	gnuplot semitec-103at.plt
+
+semitec-103at-log.png: semitec-103at-log.tsv semitec-103at.plt
+	gnuplot semitec-103at.plt
+

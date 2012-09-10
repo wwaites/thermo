@@ -14,10 +14,10 @@ static const int s103at_table[] PROGMEM = {
 static const uint8_t nentries = sizeof(s103at_table) / sizeof(*s103at_table);
 
 
-float s103at_temp(float reading) {
+float s103at_temp(float resistance) {
     int i;
     int last = 0.0;
-    int logr = (int)(log(reading) * 1000);
+    int logr = (int)(log(resistance * 1000);
     float temp = 0.0;
     for (i=0; i<nentries; i++) {
 	int next = pgm_read_word(s103at_table+i);
