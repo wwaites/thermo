@@ -4,7 +4,7 @@ Semitec 103AT-II
 The 103AT-II is a [thermisistor] made by [ATC Semitec]. It
 can be read with a simple voltage divider circuit:
 
-![Sensor Circuit](https://github.com/wwaites/thermo/blob/master/thermo-sensor.png?raw=true
+![Sensor Circuit](https://github.com/wwaites/thermo/blob/master/thermo-sensor.png?raw=true)
 
 The example application has this hooked onto analogue input
 port A1 on an [Arduino] board and simply reads the temperature
