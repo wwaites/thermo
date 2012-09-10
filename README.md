@@ -10,6 +10,10 @@ The example application has this hooked onto analogue input
 port A1 on an [Arduino] board and simply reads the temperature
 every second and writes it out the serial port.
 
+The value of R1 is chosen so that the voltage read on the 
+analogue pin should vary from about 2 and 4 V
+when the temperature is between -10 and 40 °C.
+
 The calibration [values] are extracted from the [datasheet].
 
 [ATC Semitec]: http://www.atcsemitec.co.uk/

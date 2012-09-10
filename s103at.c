@@ -3,7 +3,8 @@
 
 // Table starts at -50, continues in 5 degree increments
 // to 110 degrees...
-#define START_TEMP -50
+#define TEMP_START -50.0
+#define TEMP_INCR  5.0
 static const float s103at_table[] PROGMEM = {
     329.5,
     247.7,
@@ -50,8 +51,8 @@ float s103at_temp(float measured) {
     for (i=0; i<nentries; i++) {
 	float next = pgm_read_float(s103at_table+i);
 	if (measured > next) {
-	    float b = -50 + (i-1)*5;
-	    float a = 5.0 / (next - last);
+	    float b = TEMP_START + (i-1) * TEMP_INCR;
+	    float a = TEMP_INCR / (next - last);
 	    temp = a * (measured - last) + b;
 	    break;
 	}
