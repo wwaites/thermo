@@ -15,7 +15,7 @@ void setup() {
 void loop() {
     int reading = analogRead(A1);
     float R = 1024 * (R1 / reading) - R1;
-    printf("A0: %d R: %.04fΩ T: %.02f°C\r\n",
+    printf("A0: %d R: %.04fkΩ T: %.02f°C\r\n",
 	   reading, R, s103at_temp(R));
     delay(1000);
 }
